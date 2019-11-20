@@ -1,8 +1,11 @@
+@import "./Var.scss";
+@import "./Media.scss";
+
 /** GLOBALS STYLES **/
 body {
-    font-family: 'Muli', sans-serif;
+    font-family: $theme-font;
     margin: 0;
-    background-color: #8F57FD;
+    background-color: $main-color;
 }
 
 * {
