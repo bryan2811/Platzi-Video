@@ -1,12 +1,24 @@
 import React from 'react';
+import classNames from 'classnames';
 import '../assets/styles/components/Search.scss';
 
-const Search = () => (
-    
-    <section className="main">
-        <h2 tabIndex="0" className="main__title">¿Qué quieres ver hoy?</h2>
-        <input aria-label="Buscar" className="input" type="text" placeholder="Buscar..." />
+const Search = ({ isHome }) => {
+
+  const inputStyle = classNames('input', {
+    isHome,
+  });
+
+  return (
+    <section className='main'>
+      <h2 className='main__title'>¿Qué quieres ver hoy?</h2>
+      <input
+        aria-label='Buscar'
+        className={inputStyle}
+        type='text'
+        placeholder='Buscar...'
+      />
     </section>
-);
+  );
+};
 
 export default Search;
