@@ -1,3 +1,6 @@
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/jsx-wrap-multilines */
+/* eslint-disable implicit-arrow-linebreak */
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import Search from '../components/Search';
@@ -16,7 +19,13 @@ const Home = ({ myList, trends, originals }) => {
       {myList.length > 0 && (
         <Categories title='Mi Lista'>
           <Carousel>
-            {myList.map((item) => <CarouselItem key={item.id} {...item} />)}
+            {myList.map((item) =>
+              <CarouselItem
+                key={item.id}
+                {...item}
+                isList
+              />
+            )}
           </Carousel>
         </Categories>
       )}
