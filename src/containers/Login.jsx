@@ -75,7 +75,7 @@ const Login = props => {
         </section>
         <p className='login__container--register'>
         No tienes ninguna cuenta?
-          <Link to='/register'>Regístrate</Link>
+          <Link to='/register'> Regístrate</Link>
         </p>
       </section>
     </section>
@@ -84,6 +84,6 @@ const Login = props => {
 
 const mapDispatchToProps = {
   loginRequest,
-}
+};
 
 export default connect(null, mapDispatchToProps)(Login);
